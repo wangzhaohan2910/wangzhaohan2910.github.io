@@ -3,7 +3,7 @@ ul {
     border-radius: 10px;
 }
 
-ul li {
+ul li a {
     background-color: #666;
     border-radius: 7px;
     transition: background-color 600ms;

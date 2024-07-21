@@ -1,0 +1,25 @@
+ul {
+    background-color: #999;
+    border-radius: 10px
+}
+
+ul li {
+    background-color: #666;
+    border-radius: 7px;
+    transition: background-color 300ms;
+
+}
+
+ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+ul li:hover {
+    background-color: #bbb;
+}
+
+ul li a:hover {
+
+    text-decoration: none;
+}

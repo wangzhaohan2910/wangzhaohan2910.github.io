@@ -1,14 +1,17 @@
 ul {
     background-color: #999;
-    border-radius: 10px;
+    border-radius: 10px
 }
 
 ul li a {
     background-color: #666;
     border-radius: 7px;
     transition: background-color 600ms;
+    color: black;
+    text-decoration: none;
 }
 
-ul li:hover {
+ul li a:hover {
     background-color: #bbb;
+    text-decoration: none;
 }

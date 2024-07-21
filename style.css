@@ -1,0 +1,14 @@
+ul {
+    background-color: #999;
+    border-radius: 10px;
+}
+
+ul li {
+    background-color: #666;
+    border-radius: 7px;
+    transition: background-color 600ms;
+}
+
+ul li:hover {
+    background-color: #bbb;
+}

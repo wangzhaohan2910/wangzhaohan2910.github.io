@@ -1,0 +1,147 @@
+一个[消失的计算机](https://www.luogu.com.cn/problem/P10400)编译器，可将“消失的计算机”代码编译成C++文件：
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int n,x;
+	string s,fn;
+	cout<<"请输入输出文件路径：";
+	cin>>fn;
+	freopen(fn.c_str(),"w",stdout);
+	cout<<"#include<bits/stdc++.h>\n";
+	cout<<"using namespace std;\n";
+	cout<<"int p[1001],n;\n";
+	cout<<"int main()\n";
+	cout<<"{\n";
+	cout<<"    cin>>n;\n";
+	cout<<"    p[1]=n;\n";
+	cin>>n;
+	for(int i{1};i<=n;i++)
+	{
+		cout<<"    _"<<i<<":\n";
+		cin>>s>>x;
+		if(s=="new")
+		{
+			cout<<"    n=n+1;\n";
+			cout<<"    p["<<x<<"]=n;\n";
+		}
+		else if(s=="dec")
+		{
+			cout<<"    p["<<x<<"]=p["<<x<<"]-1;\n";
+		}
+		else if(s=="assign")
+		{
+			int y;
+			cin>>y;
+			cout<<"    p["<<x<<"]=p["<<y<<"];\n";
+		}
+		else if(s=="iftry")
+		{
+			int y;
+			string t;
+			cin>>t>>y;
+			cout<<"    if(p["<<x<<"]>=0)\n";
+			cout<<"        goto _"<<y<<";\n";
+		}
+		else if(s=="ifeq")
+		{
+			int y,z;
+			string t;
+			cin>>y>>t>>z;
+			cout<<"    if(p["<<x<<"]==p["<<y<<"])\n";
+			cout<<"        goto _"<<z<<";\n";
+		}
+		else if(s=="ifneq")
+		{
+			int y,z;
+			string t;
+			cin>>y>>t>>z;
+			cout<<"    if(p["<<x<<"]!=p["<<y<<"])\n";
+			cout<<"        goto _"<<z<<";\n";
+		}
+	}
+	cout<<"    cout<<n;\n";
+	cout<<"    return 0;\n";
+	cout<<'}';
+	return 0;
+}
+```
+原题面如下：
+# 『STA - R5』消失的计算机
+
+## 题目描述
+
+**本题为提交答案题。**
+
+后台有一个正整数 $n$（你不知道 $n$ 具体的值）。
+
+你有 $10^3$ 个变量 $p_1,p_2,\cdots,p_{10^3}$，初始 $p_1=n$，$p_2=p_3=\cdots=p_{10^3}=0$。
+
+你需要写一个程序完成一些任务，程序包含下面几种语句可供使用：
+- `new x`，令 $n\gets n+1$，$p_x\gets n$。
+- `dec x`，令 $p_x\gets p_x-1$。
+- `assign x y`，令 $p_x\gets p_y$。
+- `iftry x goto l`，如果 $p_x \ge 0$，跳转到第 $l$ 条语句。
+- `ifeq x y goto l`，如果 $p_x = p_y$，跳转到第 $l$ 条语句。
+- `ifneq x y goto l`，如果 $p_x\neq p_y$，跳转到第 $l$ 条语句。
+
+对于后三种语句，**如果当前语句是第 $\bm{l_0}$ 条，那么要求 $\bm{l<l_0}$。**
+
+你不得使用超过 $1000$ 条语句或是标号超过 $1000$ 的变量。你的程序实际语句运行次数不得超过 $10^5$。
+
+令程序执行前的 $n$ 值为程序的输入，程序执行后的 $n$ 值为程序的输出，你需要分别完成下面 $10$ 个任务：
+
+1. 输入 $n$，输出 $2n$。
+1. 输入 $n$，输出 $\binom n2$。
+1. 输入 $n$，输出 $600$。
+1. 输入 $n$，输出 $n + 1$。
+1. 输入 $n$，输出 $n^2 - 1$。
+1. 输入 $n$，输出 $n + 2000$。
+1. 输入 $n$，输出 $n + \lfloor \log_2 n\rfloor$。
+1. 输入 $n$，输出 $n + \left(n \bmod 2\right) + 1$。
+1. 输入 $n$，输出 $n+\gcd(n, n - 4) + 1$。
+1. 输入 $n$，输出一个满足 $|x-n\ln n|\le 30$ 的正整数 $x$。
+
+**注：子任务按长度排序，与难度无关。**
+
+## 输入格式
+
+该题为提交答案型试题，每个测试点对应的任务见【题目描述】。
+
+## 输出格式
+
+针对给定的 $10$ 个任务，你需要分别提交你的输出文件 ``1.out`` ~ ``10.out``。
+
+每个文件需要输出若干行。
+
+第一行一个非负整数 $L$，代表你使用的语句数量。
+
+接下来 $L$ 行，每行一个语句。
+
+## 提示
+
+**评分标准**
+
+对于每个测试点，其内部会评测若干组测试数据。
+
+若你的输出出现下列情况，那么该测试点不得分：
+
+- 输出与要求不符。
+- 实际语句运行次数大于 $10^5$。
+- 出现无法识别或不合法的语句。
+- 使用超过 $1000$ 条语句或是标号超过 $1000$ 的变量。
+
+否则设对应子任务的评分标准为 $L_0$，那么你的得分为：
+
+$$\mathrm{score}=\begin{cases}11&L_0>L\\\Big\lfloor\frac{10}{\exp\left(1-\frac {L_0}L\right)}\Big\rfloor&\text{otherwise.}\end{cases}$$
+
+下面给出各个任务对应的评分标准 $L_0$:
+
+| 编号 | $1$ | $2$ | $3$ | $4$ | $5$| $6$ | $7$ | $8$ | $9$ | $10$ |
+| :-: | :-: | :-: | :-: | :-: | :-: |  :-: | :-: | :-: | :-: | :-: |
+| $L_0$ | $3$ | $9$ | $233$ | $1$ | $10$| $29$ | $14$ | $7$ | $18$ | $14$ |
+
+**数据范围**
+
+保证 $5 \le n \le 100$。

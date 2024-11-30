@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+    <meta charset="GBK" />
 </head>
+
 <body>
-<textarea placeholder="输入一些代码......" id="textarea">
+    <textarea placeholder="锟斤拷锟斤拷一些锟斤拷锟斤拷......" id="textarea">
 </textarea>
-<pre id="p">""</pre>
-<script>
-var ta = document.getElementById("textarea");
-var p = document.getElementById("p");
-function f(){
-var k = ta.value;
-console.log(k);
-k = k.replace(/&/g,"&amp;");
-k = k.replace(/</g,"&lt;");
-k = k.replace(/\\/g,"\\\\");
-k = k.replace(/\"/g,"\\\"");
-k = k.replace(/\n/g,"\",\n\"");
-console.log(k);
-k = "\"" + k + "\"";
-p.innerHTML = k;
-console.log(k);
-}
-document.querySelector("textarea").addEventListener("input", f);
-</script>
+    <pre id="p">""</pre>
+    <script>
+        var ta = document.getElementById("textarea");
+        var p = document.getElementById("p");
+        function f() {
+            var k = ta.value;
+            console.log(k);
+            k = k.replace(/&/g, "&amp;");
+            k = k.replace(/</g, "&lt;");
+            k = k.replace(/\\/g, "\\\\");
+            k = k.replace(/\"/g, "\\\"");
+            k = k.replace(/\n/g, "\",\n\"");
+            console.log(k);
+            k = "\"" + k + "\"";
+            p.innerHTML = k;
+            console.log(k);
+        }
+        document.querySelector("textarea").addEventListener("input", f);
+    </script>
 </body>
+
 </html>

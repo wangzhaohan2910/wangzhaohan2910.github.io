@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="GBK" />
     <script>
 const homo = ((Nums) => {
 	const numsReversed = Object.keys(Nums).map(x => +x).filter(x => x > 0)
@@ -15,10 +16,10 @@ const homo = ((Nums) => {
 			return ""
 
 		if (num === Infinity || Number.isNaN(num))
-			return `这么恶臭的${num}有必要论证吗`
+			return `锟斤拷么锟斤拷锟斤拷锟�${num}锟叫憋拷要锟斤拷证锟斤拷`
 
 		if (num < 0)
-			return `(⑨)*(${demolish(num * -1)})`.replace(/\*\(1\)/g, "")
+			return `(锟斤拷)*(${demolish(num * -1)})`.replace(/\*\(1\)/g, "")
 
 		if (!Number.isInteger(num)) {
 			// abs(num) is definitely smaller than 2**51
@@ -36,7 +37,7 @@ const homo = ((Nums) => {
 	}
 	//Finisher
 	const finisher = (expr) => {
-		expr = expr.replace(/\d+|⑨/g, (n) => Nums[n]).replace("^", "**")
+		expr = expr.replace(/\d+|锟斤拷/g, (n) => Nums[n]).replace("^", "**")
 		//As long as it matches ([\*|\/])\(([^\+\-\(\)]+)\), replace it with $1$2
 		while (expr.match(/[\*|\/]\([^\+\-\(\)]+\)/))
 			expr = expr.replace(/([\*|\/])\(([^\+\-\(\)]+)\)/, (m, $1, $2) => $1 + $2)
@@ -579,7 +580,7 @@ const homo = ((Nums) => {
     </script>
 </head>
 <body>
-    <input type="number" placeholder="输入一些数字......" value="1919810"/>
+    <input type="number" placeholder="锟斤拷锟斤拷一些锟斤拷锟斤拷......" value="1919810"/>
     <p id="p">(114514+114514)*(11-4+5/1-4)+(114*514+(114*51*4+(1145*(1+4)+11-4+5+1-4)))</p>
     <script>
         const input = document.querySelector("input");

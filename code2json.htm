@@ -13,16 +13,13 @@
         var p = document.getElementById("p");
         function f() {
             var k = ta.value;
-            console.log(k);
             k = k.replace(/&/g, "&amp;");
             k = k.replace(/</g, "&lt;");
             k = k.replace(/\\/g, "\\\\");
             k = k.replace(/\"/g, "\\\"");
             k = k.replace(/\n/g, "\",\n\"");
-            console.log(k);
             k = "\"" + k + "\"";
             p.innerHTML = k;
-            console.log(k);
         }
         document.querySelector("textarea").addEventListener("input", f);
     </script>

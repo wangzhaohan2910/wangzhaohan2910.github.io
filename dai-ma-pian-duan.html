@@ -1,52 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-        <title>wangzhaohan2910的博客 - 代码片段</title>
-      <meta charset="utf-8" />
-      <meta name="generator" content="Pelican" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <head>
+                        <meta charset="utf-8" />
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                        <meta name="generator" content="Pelican" />
+                        <title>代码片段</title>
+                        <link rel="stylesheet" href="/theme/css/main.css" />
+    <meta name="description" content="Rust Read use std::{collections::VecDeque, io}; static mut V: VecDeque<${0:i8}> = VecDeque::<${0:i8}>::new(); macro_rules! read { ($x:expr) => {..." />
+        </head>
 
-        <link rel="stylesheet" href="/theme/css/rdark.css" />
-	<link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
-        <link href="/" type="application/atom+xml" rel="alternate" title="wangzhaohan2910的博客 ATOM Feed" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-	
-<!-- Using MathJax, with the delimiters $ -->
-<!-- Conflict with pygments for the .mo and .mi -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-  "HTML-CSS": {
-  styles: {
-  ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
-  },
-  tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true}
-  });
-</script>
-
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-</head>
-
-
-
-
-
-  </head>
-
-  <body>
+        <body id="index" class="home">
+                <header id="banner" class="body">
+                        <h1><a href="/">wangzhaohan2910的博客</a></h1>
+                        <nav><ul>
+                                                <li class="active"><a href="/category/misc.html">misc</a></li>
+                        </ul></nav>
+                </header><!-- /#banner -->
+  <section id="content" class="body">
+    <article>
       <header>
-          <hgroup><h1><a href="/">wangzhaohan2910的博客</a></h1></hgroup>
-          <nav><ul>
-                <li><a href="/category/misc.html"  aria-current="page" >misc</a></li>
-          </ul></nav>
+        <h1 class="entry-title">
+          <a href="/dai-ma-pian-duan.html" rel="bookmark"
+             title="Permalink to 代码片段">代码片段</a></h1>
       </header>
-      <main>
-  <article>
-    <header>
-      <h2>
-        <a href="/dai-ma-pian-duan.html" rel="bookmark"
-           title="Permalink to 代码片段">代码片段</a></h2>
-      
-    </header>
-    <h2>Rust</h2>
+
+      <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2025-04-01T19:00:00+08:00">
+                Published: 周二 01 四月 2025
+        </abbr>
+
+                <address class="vcard author">
+                        By                                 <a class="url fn" href="/author/wangzhaohan2910.html">wangzhaohan2910</a>
+                </address>
+        <p>In <a href="/category/misc.html">misc</a>.</p>
+        
+</footer><!-- /.post-info -->        <h2>Rust</h2>
 <h3>Read</h3>
 <div class="highlight"><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="n">std</span><span class="p">::{</span><span class="n">collections</span><span class="p">::</span><span class="n">VecDeque</span><span class="p">,</span><span class="w"> </span><span class="n">io</span><span class="p">};</span>
 <span class="k">static</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">V</span><span class="p">:</span><span class="w"> </span><span class="nc">VecDeque</span><span class="o">&lt;</span><span class="cp">$</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="kt">i8</span><span class="p">}</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VecDeque</span><span class="p">::</span><span class="o">&lt;</span><span class="cp">$</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="kt">i8</span><span class="p">}</span><span class="o">&gt;</span><span class="p">::</span><span class="n">new</span><span class="p">();</span>
@@ -170,24 +159,35 @@
 <h3>Quine</h3>
 <div class="highlight"><pre><span></span><code><span class="nb">-</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;</span><span class="nb">+++</span><span class="nv">&gt;&gt;</span><span class="nb">+</span><span class="nv">&gt;</span><span class="nb">++</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;</span><span class="nb">+++</span><span class="nv">&gt;&gt;</span><span class="nb">+</span><span class="nv">&gt;</span><span class="nb">++</span><span class="nv">&gt;&gt;&gt;</span><span class="nb">+</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;</span><span class="nb">++</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;&gt;&gt;&gt;</span><span class="nb">+++</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;&gt;</span><span class="nb">++</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;</span><span class="nb">+++</span><span class="nv">&gt;&gt;</span><span class="nb">++</span><span class="nv">&gt;</span><span class="nb">++</span><span class="nv">&gt;&gt;</span><span class="nb">+</span><span class="nv">&gt;&gt;</span><span class="nb">+</span><span class="nv">&gt;</span><span class="nb">++</span><span class="nv">&gt;</span><span class="nb">++</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;&gt;&gt;&gt;</span><span class="nb">+++</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;&gt;&gt;&gt;</span><span class="nb">++</span><span class="nv">&gt;</span><span class="nb">++</span><span class="nv">&gt;&gt;&gt;&gt;</span><span class="nb">+</span><span class="nv">&gt;&gt;</span><span class="nb">++</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;</span><span class="nb">+++</span><span class="nv">&gt;&gt;&gt;</span><span class="nb">++</span><span class="nv">&gt;&gt;</span><span class="nb">++++++</span><span class="nv">&gt;&gt;</span><span class="nb">+</span><span class="nv">&gt;&gt;</span><span class="nb">++</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;&gt;&gt;&gt;</span><span class="nb">+++</span><span class="nv">&gt;&gt;</span><span class="nb">+++++</span><span class="nv">&gt;&gt;</span><span class="nb">+</span><span class="nv">&gt;</span><span class="nb">+++</span><span class="nv">&gt;&gt;&gt;</span><span class="nb">++</span><span class="nv">&gt;&gt;</span><span class="nb">++</span><span class="nv">&gt;&gt;</span><span class="nb">+</span><span class="nv">&gt;&gt;</span><span class="nb">++</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;</span><span class="nb">+++</span><span class="nv">&gt;&gt;&gt;</span><span class="nb">++</span><span class="nv">&gt;&gt;</span><span class="nb">+++++++++++++</span><span class="nv">&gt;&gt;</span><span class="nb">+</span><span class="nv">&gt;&gt;</span><span class="nb">++</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;</span><span class="nb">+++</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;</span><span class="nb">+++</span><span class="nv">&gt;&gt;&gt;</span><span class="nb">++</span><span class="nv">&gt;&gt;</span><span class="nb">++++</span><span class="nv">&gt;&gt;</span><span class="nb">+</span><span class="nv">&gt;&gt;</span><span class="nb">++</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;&gt;&gt;&gt;</span><span class="nb">+++</span><span class="nv">&gt;&gt;</span><span class="nb">+++++</span><span class="nv">&gt;&gt;&gt;&gt;</span><span class="nb">++</span><span class="nv">&gt;&gt;&gt;&gt;</span><span class="nb">+</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;</span><span class="nb">++</span><span class="nv">&gt;&gt;</span><span class="nb">+++</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;&gt;&gt;&gt;</span><span class="nb">+++</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;&gt;&gt;&gt;</span><span class="nb">+++</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;&gt;&gt;&gt;</span><span class="nb">+++</span><span class="nv">&gt;&gt;</span><span class="nb">++</span><span class="nv">&gt;</span><span class="nb">++</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;</span><span class="nb">+++</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;</span><span class="nb">++</span><span class="nv">&gt;</span><span class="nb">++</span><span class="nv">&gt;&gt;&gt;&gt;&gt;&gt;</span><span class="nb">++</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;</span><span class="nb">+++</span><span class="nv">&gt;&gt;&gt;&gt;&gt;</span><span class="nb">+++</span><span class="nv">&gt;&gt;&gt;</span><span class="nb">++</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;</span><span class="nb">+++</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;</span><span class="nb">++</span><span class="nv">&gt;&gt;&gt;&gt;&gt;&gt;</span><span class="nb">++</span><span class="nv">&gt;&gt;&gt;</span><span class="nb">+</span><span class="nv">&gt;&gt;&gt;</span><span class="nb">++</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;&gt;&gt;&gt;</span><span class="nb">+++</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;&gt;&gt;</span><span class="nb">+</span><span class="nv">&gt;&gt;</span><span class="nb">++</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;</span><span class="nb">++++++++++++++++++</span><span class="nv">&gt;&gt;&gt;&gt;</span><span class="nb">+</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;&gt;&gt;</span><span class="nb">+</span><span class="nv">&gt;&gt;</span><span class="nb">++</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;</span><span class="nb">+++</span><span class="nv">&gt;&gt;&gt;</span><span class="nb">++</span><span class="nv">&gt;&gt;</span><span class="nb">++++++++</span><span class="nv">&gt;&gt;</span><span class="nb">+</span><span class="nv">&gt;&gt;</span><span class="nb">++</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;&gt;&gt;&gt;</span><span class="nb">+++</span><span class="nv">&gt;&gt;</span><span class="nb">++++++</span><span class="nv">&gt;&gt;&gt;</span><span class="nb">+</span><span class="nv">&gt;</span><span class="nb">++</span><span class="nv">&gt;&gt;</span><span class="nb">+++</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;</span><span class="nb">++</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;</span><span class="nb">+++</span><span class="nv">&gt;&gt;&gt;&gt;&gt;</span><span class="nb">+++</span><span class="nv">&gt;&gt;&gt;</span><span class="nb">+</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;&gt;</span><span class="nb">++</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;</span><span class="nb">+++</span><span class="nv">&gt;&gt;&gt;</span><span class="nb">++</span><span class="nv">&gt;&gt;</span><span class="nb">++++++++</span><span class="nv">&gt;&gt;</span><span class="nb">+</span><span class="nv">&gt;&gt;</span><span class="nb">++</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;&gt;&gt;&gt;</span><span class="nb">+++</span><span class="nv">&gt;&gt;</span><span class="nb">++++</span><span class="nv">&gt;&gt;</span><span class="nb">+</span><span class="nv">&gt;</span><span class="nb">+++</span><span class="nv">&gt;&gt;&gt;&gt;&gt;&gt;</span><span class="nb">++</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;</span><span class="nb">+++</span><span class="nv">&gt;&gt;</span><span class="nb">+</span><span class="nv">&gt;</span><span class="nb">++</span><span class="nv">&gt;&gt;&gt;&gt;</span><span class="nb">+</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;</span><span class="nb">++</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&gt;&gt;&gt;&gt;</span><span class="nb">+++</span><span class="nv">&gt;&gt;</span><span class="nb">+++</span><span class="nv">&gt;&gt;&gt;</span><span class="nb">+</span><span class="k">[[</span><span class="nb">-</span><span class="nv">&gt;&gt;</span><span class="nb">+</span><span class="nv">&lt;&lt;</span><span class="k">]</span><span class="nv">&lt;</span><span class="nb">+</span><span class="k">]</span><span class="nb">+++++</span><span class="k">[</span><span class="nb">-</span><span class="nv">&gt;</span><span class="nb">+++++++++</span><span class="nv">&lt;</span><span class="k">]</span><span class="nv">&gt;</span><span class="nt">.</span><span class="k">[</span><span class="nb">+</span><span class="k">]</span><span class="nv">&gt;&gt;</span><span class="k">[</span><span class="nv">&lt;&lt;</span><span class="nb">+++++++</span><span class="k">[</span><span class="nb">-</span><span class="nv">&gt;</span><span class="nb">+++++++++</span><span class="nv">&lt;</span><span class="k">]</span><span class="nv">&gt;</span><span class="nb">-</span><span class="nt">.</span><span class="nb">-------------------</span><span class="nv">&gt;</span><span class="nb">-</span><span class="k">[</span><span class="nb">-</span><span class="nv">&lt;</span><span class="nt">.</span><span class="nv">&lt;</span><span class="nb">+</span><span class="nv">&gt;&gt;</span><span class="k">]</span><span class="nv">&lt;</span><span class="k">[</span><span class="nb">+</span><span class="k">]</span><span class="nv">&lt;</span><span class="nb">+</span><span class="nv">&gt;&gt;&gt;</span><span class="k">]</span><span class="nv">&lt;&lt;&lt;</span><span class="k">[</span><span class="nb">-</span><span class="k">[</span><span class="nb">-</span><span class="k">[</span><span class="nb">-</span><span class="k">[</span><span class="nv">&gt;&gt;</span><span class="nb">+</span><span class="nv">&lt;</span><span class="nb">++++++</span><span class="k">[</span><span class="nb">-</span><span class="nv">&gt;</span><span class="nb">+++++</span><span class="nv">&lt;</span><span class="k">]]</span><span class="nv">&gt;</span><span class="nb">++++++++++++++</span><span class="nv">&lt;</span><span class="k">]</span><span class="nv">&gt;</span><span class="nb">+++</span><span class="nv">&lt;</span><span class="k">]</span><span class="nb">++++++</span><span class="k">[</span><span class="nb">-</span><span class="nv">&gt;</span><span class="nb">+++++++</span><span class="nv">&lt;</span><span class="k">]</span><span class="nv">&gt;</span><span class="nb">+</span><span class="nv">&lt;&lt;&lt;</span><span class="nb">-</span><span class="k">[</span><span class="nb">-</span><span class="nv">&gt;&gt;&gt;</span><span class="nb">++</span><span class="nv">&lt;&lt;&lt;</span><span class="k">]</span><span class="nv">&gt;</span><span class="k">[</span><span class="nb">-</span><span class="nv">&gt;&gt;</span><span class="nt">.</span><span class="nv">&lt;&lt;</span><span class="k">]</span><span class="nv">&lt;&lt;</span><span class="k">]</span>
 </code></pre></div>
-    <footer>
-      <p>Published: <time datetime="2025-04-01T19:00:00+08:00">
-        周二 01 四月 2025
-      </time></p>
-        <address>
-          By             <a href="/author/wangzhaohan2910.html">wangzhaohan2910</a>
-        </address>
-        <p>
-          Category: <a href="/category/misc.html">misc</a>
-        </p>
-    </footer>
-  </article>
-      </main>
-      <footer>
-          <address>
-            Proudly powered by <a rel="nofollow" href="https://getpelican.com/">Pelican</a>,
-            which takes great advantage of <a rel="nofollow" href="https://www.python.org/">Python</a>.
-          </address>
-      </footer>
-  </body>
+      </div><!-- /.entry-content -->
+
+    </article>
+  </section>
+                <section id="extras" class="body">
+                                <div class="blogroll">
+                                        <h2>links</h2>
+                                        <ul>
+                                                        <li><a href="https://getpelican.com/">Pelican</a></li>
+                                                        <li><a href="https://www.python.org/">Python.org</a></li>
+                                                        <li><a href="#">Local site</a></li>
+                                        </ul>
+                                </div><!-- /.blogroll -->
+                                <div class="social">
+                                        <h2>social</h2>
+                                        <ul>
+
+                                                        <li><a href="https://github.com/wangzhaohan2910">Github tells everything</a></li>
+                                        </ul>
+                                </div><!-- /.social -->
+                </section><!-- /#extras -->
+
+                <footer id="contentinfo" class="body">
+                        <address id="about" class="vcard body">
+                                Proudly powered by <a rel="nofollow" href="https://getpelican.com/">Pelican</a>, which takes great advantage of <a rel="nofollow" href="https://www.python.org/">Python</a>.
+                        </address><!-- /#about -->
+
+                        <p>The theme is by <a rel="nofollow" href="https://www.smashingmagazine.com/2009/08/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+                </footer><!-- /#contentinfo -->
+
+        </body>
 </html>

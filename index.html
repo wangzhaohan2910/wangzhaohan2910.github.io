@@ -130,7 +130,7 @@
 </footer><!-- /.post-info -->                        <h2>Rust</h2>
 <h3>Read</h3>
 <div class="highlight"><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="n">std</span><span class="p">::{</span><span class="n">collections</span><span class="p">::</span><span class="n">VecDeque</span><span class="p">,</span><span class="w"> </span><span class="n">io</span><span class="p">};</span>
-<span class="k">static</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">V</span><span class="p">:</span><span class="w"> </span><span class="nc">VecDeque</span><span class="o">&lt;</span><span class="cp">$</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="kt">i8</span><span class="p">}</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VecDeque</span><span class="p">::</span><span class="o">&lt;</span><span class="cp">$</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="kt">i8</span><span class="p">}</span><span class="o">&gt;</span><span class="p">::</span><span class="n">new</span><span class="p">();</span>
+<span class="k">static</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">V</span><span class="p">:</span><span class="w"> </span><span class="nc">VecDeque</span><span class="o">&lt;</span><span class="kt">i8</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VecDeque</span><span class="p">::</span><span class="o">&lt;</span><span class="kt">i8</span><span class="o">&gt;</span><span class="p">::</span><span class="n">new</span><span class="p">();</span>
 <span class="fm">macro_rules!</span><span class="w"> </span><span class="n">read</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="p">(</span><span class="cp">$x</span><span class="p">:</span><span class="nc">expr</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">unsafe</span><span class="w"> </span><span class="p">{</span>
@@ -140,7 +140,14 @@
 <span class="w">                </span><span class="n">buf</span><span class="p">.</span><span class="n">split_whitespace</span><span class="p">()</span>
 <span class="w">                    </span><span class="p">.</span><span class="n">for_each</span><span class="p">(</span><span class="o">|</span><span class="n">x</span><span class="o">|</span><span class="w"> </span><span class="n">V</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">parse</span><span class="p">().</span><span class="n">unwrap</span><span class="p">()));</span>
 <span class="w">            </span><span class="p">}</span>
-<span class="w">            </span><span class="cp">$x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">V</span><span class="p">.</span><span class="n">pop_front</span><span class="p">().</span><span class="n">unwrap</span><span class="p">().</span><span class="n">into …</span></code></pre></div>
+<span class="w">            </span><span class="cp">$x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">V</span><span class="p">.</span><span class="n">pop_front</span><span class="p">().</span><span class="n">unwrap</span><span class="p">().</span><span class="n">into</span><span class="p">()</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3>Quine</h3>
+<div class="highlight"><pre><span></span><code><span class="k">fn …</span></code></pre></div>
                         <a class="readmore" href="/dai-ma-pian-duan.html">read more</a>
                     </div><!-- /.entry-content -->
                 </article></li>

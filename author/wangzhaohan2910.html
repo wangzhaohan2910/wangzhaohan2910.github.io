@@ -96,48 +96,6 @@
 
                 <li><article class="hentry">
                     <header>
-                        <h1><a href="/dai-ma-pian-duan.html" rel="bookmark"
-                               title="Permalink to 代码片段">代码片段</a></h1>
-                    </header>
-
-                    <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2025-04-01T19:00:00+08:00">
-                Published: 周二 01 四月 2025
-        </abbr>
-
-                <address class="vcard author">
-                        By                                 <a class="url fn" href="/author/wangzhaohan2910.html">wangzhaohan2910</a>
-                </address>
-        <p>In <a href="/category/misc.html">misc</a>.</p>
-        
-</footer><!-- /.post-info -->                        <h2>Rust</h2>
-<h3>Read</h3>
-<div class="highlight"><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="n">std</span><span class="p">::{</span><span class="n">collections</span><span class="p">::</span><span class="n">VecDeque</span><span class="p">,</span><span class="w"> </span><span class="n">io</span><span class="p">};</span>
-<span class="k">static</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">V</span><span class="p">:</span><span class="w"> </span><span class="nc">VecDeque</span><span class="o">&lt;</span><span class="kt">i8</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VecDeque</span><span class="p">::</span><span class="o">&lt;</span><span class="kt">i8</span><span class="o">&gt;</span><span class="p">::</span><span class="n">new</span><span class="p">();</span>
-<span class="fm">macro_rules!</span><span class="w"> </span><span class="n">read</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="p">(</span><span class="cp">$x</span><span class="p">:</span><span class="nc">expr</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">unsafe</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="n">V</span><span class="p">.</span><span class="n">is_empty</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">buf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">String</span><span class="p">::</span><span class="n">new</span><span class="p">();</span>
-<span class="w">                </span><span class="n">io</span><span class="p">::</span><span class="n">stdin</span><span class="p">().</span><span class="n">read_line</span><span class="p">(</span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">buf</span><span class="p">).</span><span class="n">unwrap</span><span class="p">();</span>
-<span class="w">                </span><span class="n">buf</span><span class="p">.</span><span class="n">split_whitespace</span><span class="p">()</span>
-<span class="w">                    </span><span class="p">.</span><span class="n">for_each</span><span class="p">(</span><span class="o">|</span><span class="n">x</span><span class="o">|</span><span class="w"> </span><span class="n">V</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">parse</span><span class="p">().</span><span class="n">unwrap</span><span class="p">()));</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">            </span><span class="cp">$x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">V</span><span class="p">.</span><span class="n">pop_front</span><span class="p">().</span><span class="n">unwrap</span><span class="p">().</span><span class="n">into</span><span class="p">()</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">};</span>
-<span class="p">}</span>
-</code></pre></div>
-
-<h3>Quine</h3>
-<div class="highlight"><pre><span></span><code><span class="k">fn …</span></code></pre></div>
-                        <a class="readmore" href="/dai-ma-pian-duan.html">read more</a>
-                    </div><!-- /.entry-content -->
-                </article></li>
-
-                <li><article class="hentry">
-                    <header>
                         <h1><a href="/ji-wo-de-13sui-sheng-ri.html" rel="bookmark"
                                title="Permalink to 记我的13岁生日">记我的13岁生日</a></h1>
                     </header>

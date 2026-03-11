@@ -35,7 +35,7 @@ jobs:
       - name: Generate
         run: |
           npm install -g hexo-cli
-          npm install -g hexo-filter-katex
+          npm install hexo-filter-katex
           hexo g
       - name: Setup Pages
         uses: actions/configure-pages@v5

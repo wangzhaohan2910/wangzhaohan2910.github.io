@@ -40,10 +40,10 @@ jobs:
           npm uninstall -g hexo-generator-index
       - name: Install KaTeX
         run: |
-          npm install hexo-filter-katex --save
+          npm install -g hexo-filter-katex
       - name: Install Pin Top
         run: |
-          npm install hexo-generator-index-pin-top --save
+          npm install hexo-generator-index-pin-top
       - name: Build Output
         run: |
           hexo g

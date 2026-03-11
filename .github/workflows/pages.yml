@@ -35,15 +35,9 @@ jobs:
       - name: Install Hexo
         run: |
           npm install -g hexo-cli
-      # - name: Uninstall Index
-      #   run: |
-      #     npm uninstall -g hexo-generator-index
       - name: Install KaTeX
         run: |
-          npm install -g hexo-filter-katex
-      - name: Install Pin Top
-        run: |
-          npm install -g hexo-generator-index-pin-top
+          npm install hexo-filter-katex
       - name: Build Output
         run: |
           hexo g

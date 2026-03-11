@@ -38,6 +38,10 @@ jobs:
       - name: Install KaTeX
         run: |
           npm install hexo-filter-katex
+      - name: Pin Top
+        run: |
+          npm uninstall hexo-generator-index
+          npm install hexo-generator-index-custom --save
       - name: Build Output
         run: |
           hexo g

@@ -37,7 +37,7 @@ jobs:
           npm install -g hexo-cli
       - name: Uninstall Index
         run: |
-          npm uninstall hexo-generator-index
+          npm uninstall -g hexo-generator-index
       - name: Install KaTeX
         run: |
           npm install hexo-filter-katex --save

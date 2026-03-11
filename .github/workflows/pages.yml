@@ -29,26 +29,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Set up Node.js
-        uses: actions/setup-node@v6.3.0
-      - name: Install Hexo
+        uses: actions/setup-node@v6
+      - name: Generate
         run: |
           npm install -g hexo-cli
-      - name: Install KaTeX
-        run: |
-          npm install hexo-filter-katex
-      - name: Pin Top
-        run: |
-          npm uninstall hexo-generator-index
-          npm install hexo-generator-index-custom --save
-      - name: Build Output
-        run: |
+          npm install -g hexo-filter-katex
           hexo g
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: './public'
       - name: Deploy to GitHub Pages

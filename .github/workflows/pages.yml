@@ -43,7 +43,7 @@ jobs:
           npm install -g hexo-filter-katex
       - name: Install Pin Top
         run: |
-          npm install hexo-generator-index-pin-top
+          npm install -g hexo-generator-index-pin-top
       - name: Build Output
         run: |
           hexo g

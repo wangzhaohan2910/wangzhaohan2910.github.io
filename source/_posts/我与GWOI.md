@@ -39,4 +39,7 @@ J 老师把教室的钥匙交给 allqpsi 保管。为了防止 allqpsi 麻烦，
 
 我现在仍然时常想起 DC，时常想起 J 老师，时常想起那个面积不大的办公室，叫做“信息学竞赛室”，时常想起在竞赛室里度过的、令我陶醉于其中的无忧无虑的时光。
 
-注：DC：dctc800d：https://www.luogu.com.cn/user/735087；allqpsi：https://www.luogu.com.cn/user/380406；xhhhh36：https://www.luogu.com.cn/user/957589
+注：<br>
+DC：dctc800d：https://www.luogu.com.cn/user/735087<br>
+allqpsi：https://www.luogu.com.cn/user/380406<br>
+xhhhh36：https://www.luogu.com.cn/user/957589

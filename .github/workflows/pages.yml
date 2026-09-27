@@ -29,20 +29,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@latest
+        uses: actions/checkout@v6
       - name: Set up Node.js
-        uses: actions/setup-node@latest
+        uses: actions/setup-node@v7
       - name: Generate
         run: |
           npm install -g hexo-cli
           npm install hexo-filter-katex
           hexo g
       - name: Setup Pages
-        uses: actions/configure-pages@latest
+        uses: actions/configure-pages@v6
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@latest
+        uses: actions/upload-pages-artifact@v5
         with:
           path: './public'
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@latest
+        uses: actions/deploy-pages@v5

@@ -4,12 +4,12 @@
 
 # Site
 title: WANGZHAOHAN2910
-subtitle: '今天不学习 明天变垃圾'
-description: 'wangzhaohan2910的博客。'
+subtitle: 今天不学习 明天变垃圾
+description: wangzhaohan2910的博客。
 keywords:
 author: wangzhaohan2910
 language: zh
-timezone: 'Asia/Hong_Kong'
+timezone: Asia/Hong_Kong
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'

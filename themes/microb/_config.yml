@@ -11,7 +11,7 @@ menu:
   # archives: /archives
 
 # Miscelaneous
-favicon: https://s2.loli.net/2025/03/04/dUP5eCch8t4zDZF.webp
+favicon: /logo.png
 
 # stylesheets loaded in the <head>
 stylesheets:
@@ -27,3 +27,8 @@ scripts:
 # switch
 show_excerpt: false
 show_date: true
+
+# links
+links:
+  Hexo: http://hexo.io
+  Theme microb: https://github.com/microacup/hexo-theme-micorb
